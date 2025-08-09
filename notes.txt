@@ -1,5 +1,5 @@
 # Запуск сервера:
-./gradlew bootRun
+gradlew bootRun
 
 # Подключение к БД H2:
 Адрес для подключения: http://localhost:8080/h2-console
