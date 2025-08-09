@@ -3,5 +3,8 @@
 
 # Подключение к БД H2:
 Адрес для подключения: http://localhost:8080/h2-console
-URL: jdbc:h2:file:./data/moneytransferdb
-(Всё остальное оставить по умолчанию.)
+Заполнить поля (могут быть уже заполнены):
+Driver Class: org.h2.Driver
+JDBC URL: jdbc:h2:file:./data/moneytransferdb
+User Name: sa
+Password: (пусто)
