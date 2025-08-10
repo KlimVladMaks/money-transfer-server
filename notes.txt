@@ -1,5 +1,6 @@
 # Запуск сервера:
 gradlew bootRun
+./gradlew bootRun
 
 # Подключение к БД H2:
 Адрес для подключения: http://localhost:8080/h2-console
@@ -8,3 +9,14 @@ Driver Class: org.h2.Driver
 JDBC URL: jdbc:h2:file:./data/moneytransferdb
 User Name: sa
 Password: (пусто)
+
+# Запрос для регистрации нового пользователя:
+curl -X POST "http://localhost:8080/api/users/register?login=<ЛОГИН>&password=<ПАРОЛЬ>&description=<ОПИСАНИЕ>"
+
+# Запрос для авторизации:
+curl -X POST "http://localhost:8080/api/users/login?login=<ЛОГИН>&password=<ПАРОЛЬ>"
+Возвращает ответ в формате:
+{ "sessionId": "d3b07384-d113-4ec6-8a3f-3a4a5c7d8e9f" }
+
+# Запрос для сброса сессии:
+curl -X POST "http://localhost:8080/api/users/logout?sessionId=<ID_СЕССИИ>"

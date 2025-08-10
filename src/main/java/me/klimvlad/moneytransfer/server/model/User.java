@@ -13,7 +13,9 @@ public class User {
     private String password;
     
     private String description;
-    
+
+    private String sessionId;
+
     // Геттеры и сеттеры
     public String getLogin() {
         return login;
@@ -38,4 +40,7 @@ public class User {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String getSessionId() { return sessionId; }
+    public void setSessionId(String sessionId) { this.sessionId = sessionId; }
 }
